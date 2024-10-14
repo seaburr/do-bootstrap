@@ -4,6 +4,18 @@ This project aims to be a starting point for deploying a usable, well-architecte
 
 ## Dependencies
 
+### Platforms
+
+Below are the accounts/services that `do-bootstrap` is dependant on.
+
+* GitHub
+* DigitalOcean
+* Terraform Cloud
+
+### Tools
+
+Below are the pieces of software which need to be installed on the provisioner machine.
+
 * Terraform (written using 1.9.7)
 
 ```sh
@@ -18,3 +30,9 @@ brew install doctl
 ```
 
 * kubectl (1.30)
+
+* Flux
+
+```sh
+brew install fluxcd/tap/flux
+```

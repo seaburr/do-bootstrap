@@ -9,7 +9,7 @@ resource "digitalocean_database_cluster" "postgres_cluster" {
 
   # Inputs are in UTC.
   maintenance_window {
-    day  = "Saturday"
+    day  = "saturday"
     hour = "4:00"
   }
 }

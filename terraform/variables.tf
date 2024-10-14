@@ -22,6 +22,12 @@ variable "vpc_cidr" {
   default     = "10.20.0.0/16"
 }
 
+variable "k8s_ha" {
+  type        = bool
+  description = "Sets whether or not the k8s control plane should be highly available."
+  default     = false
+}
+
 variable "container_registry_tier" {
   type        = string
   description = "Sets the subscription tier of the container registry. Options are: stater, basic, or professional."
@@ -38,7 +44,4 @@ variable "database_node_count" {
   type        = number
   description = "Sets the number of nodes within the database cluster."
   default     = 1
-
 }
-
-

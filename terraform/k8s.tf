@@ -3,10 +3,12 @@ data "digitalocean_kubernetes_versions" "k8s_version" {
 }
 
 resource "digitalocean_kubernetes_cluster" "k8s_cluster" {
-  name         = "${var.project_name}-k8s-cluster"
-  region       = var.region
-  auto_upgrade = true
-  version      = data.digitalocean_kubernetes_versions.k8s_version.latest_version
+  name                 = "${var.project_name}-k8s-cluster"
+  region               = var.region
+  auto_upgrade         = true
+  ha                   = var.k8s_ha
+  registry_integration = true
+  version              = data.digitalocean_kubernetes_versions.k8s_version.latest_version
 
   maintenance_policy {
     day        = "saturday"
