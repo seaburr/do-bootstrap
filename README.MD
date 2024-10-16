@@ -36,3 +36,9 @@ brew install doctl
 ```sh
 brew install fluxcd/tap/flux
 ```
+
+* terraform-docs
+
+```sh
+brew install terraform-docs
+```

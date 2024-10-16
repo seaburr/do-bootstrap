@@ -17,9 +17,9 @@ resource "digitalocean_kubernetes_cluster" "k8s_cluster" {
 
   node_pool {
     name       = "${var.project_name}-default-node-pool"
-    size       = "s-1vcpu-2gb"
-    auto_scale = true
-    min_nodes  = 1
-    max_nodes  = 2
+    size       = var.k8s_default_node_slug
+    auto_scale = var.k8s_default_auto_scale
+    min_nodes  = var.k8s_default_min_nodes
+    max_nodes  = var.k8s_default_max_nodes
   }
 }

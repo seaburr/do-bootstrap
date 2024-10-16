@@ -4,3 +4,8 @@ resource "digitalocean_vpc" "this" {
   region      = var.region
   ip_range    = var.vpc_cidr
 }
+
+resource "digitalocean_domain" "this" {
+  count = var.domain != null ? 1 : 0
+  name  = var.domain
+}

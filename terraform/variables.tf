@@ -2,6 +2,7 @@ variable "digitalocean_token" {
   type        = string
   description = "Sets the token for authenticating with DigialOcean."
   default     = null
+  sensitive   = true
 }
 
 variable "project_name" {
@@ -22,10 +23,40 @@ variable "vpc_cidr" {
   default     = "10.20.0.0/16"
 }
 
+variable "domain" {
+  type        = string
+  description = "If set, creates the domain resource as part of the infrastructure footprint."
+  default     = null
+}
+
 variable "k8s_ha" {
   type        = bool
   description = "Sets whether or not the k8s control plane should be highly available."
   default     = false
+}
+
+variable "k8s_default_node_slug" {
+  type        = string
+  description = "Sets the node size of the default node pool in the k8s cluster."
+  default     = "s-1vcpu-2gb"
+}
+
+variable "k8s_default_auto_scale" {
+  type        = bool
+  description = "If set, the k8s cluster size will auto-scale based on load and within the bounds of the min/max set."
+  default     = true
+}
+
+variable "k8s_default_min_nodes" {
+  type        = number
+  description = "Sets the minimum number of nodes in the default node pool."
+  default     = 1
+}
+
+variable "k8s_default_max_nodes" {
+  type        = number
+  description = "Sets the maximum number of nodes in the default node pool."
+  default     = 2
 }
 
 variable "container_registry_tier" {
