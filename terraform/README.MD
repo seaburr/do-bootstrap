@@ -19,6 +19,7 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [digitalocean_certificate.tls_cert](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/certificate) | resource |
 | [digitalocean_database_cluster.postgres_cluster](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/database_cluster) | resource |
 | [digitalocean_database_connection_pool.postgres_pooler](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/database_connection_pool) | resource |
 | [digitalocean_database_db.database](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/database_db) | resource |
@@ -48,5 +49,8 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_k8s_cluster_uuid"></a> [k8s\_cluster\_uuid](#output\_k8s\_cluster\_uuid) | DigitalOcean k8s cluster ID. This is needed for fetching the kubeconfig via doctl. |
+| <a name="output_tls_cert_uuid"></a> [tls\_cert\_uuid](#output\_tls\_cert\_uuid) | DigitalOcean managed certficate UUID. This is needed for to configure the k8s load balancer. |
 <!-- END_TF_DOCS -->
