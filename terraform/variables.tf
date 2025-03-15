@@ -14,7 +14,7 @@ variable "project_name" {
 variable "region" {
   type        = string
   description = "Sets the region for DigitalOcean resources."
-  default     = "nyc1"
+  default     = "nyc2"
 }
 
 variable "vpc_cidr" {
@@ -56,7 +56,7 @@ variable "k8s_default_min_nodes" {
 variable "k8s_default_max_nodes" {
   type        = number
   description = "Sets the maximum number of nodes in the default node pool."
-  default     = 2
+  default     = 3
 }
 
 variable "container_registry_tier" {
