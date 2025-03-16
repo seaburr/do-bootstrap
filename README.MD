@@ -42,3 +42,17 @@ brew install fluxcd/tap/flux
 ```sh
 brew install terraform-docs
 ```
+
+* helm
+
+```sh
+brew install helm
+```
+
+## Connecting To Cluster
+
+After the cluster is created, you can use the terraform output `k8s_cluster_uuid` to get cluster credentials.
+
+```
+doctl kubernetes cluster kubeconfig save [k8s-cluster_uuid]
+```

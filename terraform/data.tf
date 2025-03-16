@@ -8,7 +8,7 @@ data "digitalocean_kubernetes_cluster" "k8s_cluster" {
 
 data "kubernetes_service" "dolb" {
   metadata {
-    name = "https-with-cert-minimal"
+    name = "dolb"
   }
 
   depends_on = [

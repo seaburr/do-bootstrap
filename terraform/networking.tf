@@ -11,10 +11,11 @@ resource "digitalocean_domain" "this" {
 }
 
 resource "digitalocean_record" "this" {
+  count  = var.domain != null ? 1 : 0
   domain = digitalocean_domain.this[0].id
   type   = "A"
   name   = "@"
-  ttl    = 1800
+  ttl    = var.ttl
   value  = data.kubernetes_service.dolb.status.0.load_balancer.0.ingress.0.ip
 
   depends_on = [

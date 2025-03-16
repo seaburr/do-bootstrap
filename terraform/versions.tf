@@ -8,5 +8,9 @@ terraform {
       source  = "hashicorp/kubernetes"
       version = "~> 2.0"
     }
+    flux = {
+      source  = "fluxcd/flux"
+      version = "~> 1.5"
+    }
   }
 }

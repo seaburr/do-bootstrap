@@ -1,11 +1,14 @@
 fmt:
 	cd ./terraform && terraform fmt
 
-tfdocs:
+docs:
 	terraform-docs --config ./terraform/.terraform-docs.yaml ./terraform
 
-tfplan:
+plan:
 	cd ./terraform && terraform plan
 
-tfapply:
+apply:
 	cd ./terraform && terraform apply
+
+refresh:
+	cd ./terraform && terraform apply -refresh-only

@@ -29,6 +29,12 @@ variable "domain" {
   default     = null
 }
 
+variable "ttl" {
+  type        = number
+  description = "TTL of DNS records created in DigitalOcean."
+  default     = 600
+}
+
 variable "k8s_ha" {
   type        = bool
   description = "Sets whether or not the k8s control plane should be highly available."
@@ -75,4 +81,29 @@ variable "database_node_count" {
   type        = number
   description = "Sets the number of nodes within the database cluster."
   default     = 1
+}
+
+variable "flux_github_url" {
+  type        = string
+  description = "Sets the GitHub repo clone URL (HTTP) to bootstrap Flux with."
+  default     = null
+}
+
+variable "flux_github_username" {
+  type        = string
+  description = "Arbitrary username used for bootstrapping Flux."
+  default     = "git"
+}
+
+variable "flux_github_pat" {
+  type        = string
+  description = "Github PAT used by Flux."
+  default     = null
+  sensitive   = true
+}
+
+variable "flux_dir" {
+  type        = string
+  description = "Directory with in the repository for Flux to sync from."
+  default     = null
 }
