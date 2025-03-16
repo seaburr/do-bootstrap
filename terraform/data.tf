@@ -1,5 +1,5 @@
 data "digitalocean_kubernetes_versions" "k8s_version" {
-  version_prefix = "1.32."
+  version_prefix = var.k8s_major_version
 }
 
 data "digitalocean_kubernetes_cluster" "k8s_cluster" {

@@ -65,6 +65,12 @@ variable "k8s_default_max_nodes" {
   default     = 3
 }
 
+variable "k8s_major_version" {
+  type        = string
+  description = "Sets the major version of k8s to use."
+  default     = "1.32."
+}
+
 variable "container_registry_tier" {
   type        = string
   description = "Sets the subscription tier of the container registry. Options are: stater, basic, or professional."

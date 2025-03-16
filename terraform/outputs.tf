@@ -14,10 +14,10 @@ output "pg_cert" {
 
 output "pg_connection_details" {
   value = {
-    host = data.digitalocean_database_connection_pool.postgres_pooler.private_host
-    port = data.digitalocean_database_connection_pool.postgres_pooler.port
-    db_name = data.digitalocean_database_connection_pool.postgres_pooler.db_name
-    user = data.digitalocean_database_user.user.name
+    host     = data.digitalocean_database_connection_pool.postgres_pooler.private_host
+    port     = data.digitalocean_database_connection_pool.postgres_pooler.port
+    db_name  = data.digitalocean_database_connection_pool.postgres_pooler.db_name
+    user     = data.digitalocean_database_user.user.name
     password = data.digitalocean_database_user.user.password
   }
   sensitive = true
