@@ -49,6 +49,15 @@ brew install terraform-docs
 brew install helm
 ```
 
+## Setting up Environment
+
+This project is currently leveraging Terraform Cloud as the backend. These are the variables that need to be defined in the workspace:
+
+* `digitalocean_token` - Token used to authenticate with DigitalOcean APIs.
+* `domain` - Domain name. Needs to exist within DigitalOcean and be pointed at their nameservers.
+* `flux_github_pat` - Personal Access Token (PAT) needed by Flux to authenticate with GitHub.
+* `flux_github_url` - HTTPS clone URL of Flux repository.
+
 ## Connecting To Cluster
 
 After the cluster is created, you can use the terraform output `k8s_cluster_uuid` to get cluster credentials.

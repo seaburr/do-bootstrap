@@ -34,6 +34,9 @@ No modules.
 | [digitalocean_vpc.this](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/vpc) | resource |
 | [flux_bootstrap_git.this](https://registry.terraform.io/providers/fluxcd/flux/latest/docs/resources/bootstrap_git) | resource |
 | [kubernetes_service.dolb](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/service) | resource |
+| [digitalocean_database_ca.cert](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/data-sources/database_ca) | data source |
+| [digitalocean_database_connection_pool.postgres_pooler](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/data-sources/database_connection_pool) | data source |
+| [digitalocean_database_user.user](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/data-sources/database_user) | data source |
 | [digitalocean_kubernetes_cluster.k8s_cluster](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/data-sources/kubernetes_cluster) | data source |
 | [digitalocean_kubernetes_versions.k8s_version](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/data-sources/kubernetes_versions) | data source |
 | [kubernetes_service.dolb](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/data-sources/service) | data source |
@@ -66,5 +69,7 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_k8s_cluster_uuid"></a> [k8s\_cluster\_uuid](#output\_k8s\_cluster\_uuid) | DigitalOcean k8s cluster ID. This is needed for fetching the kubeconfig via doctl. |
+| <a name="output_pg_cert"></a> [pg\_cert](#output\_pg\_cert) | n/a |
+| <a name="output_pg_connection_details"></a> [pg\_connection\_details](#output\_pg\_connection\_details) | n/a |
 | <a name="output_tls_cert_uuid"></a> [tls\_cert\_uuid](#output\_tls\_cert\_uuid) | DigitalOcean managed certficate UUID. This is needed for to configure the k8s load balancer. |
 <!-- END_TF_DOCS -->

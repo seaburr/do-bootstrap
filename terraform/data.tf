@@ -15,3 +15,17 @@ data "kubernetes_service" "dolb" {
     kubernetes_service.dolb
   ]
 }
+
+data "digitalocean_database_ca" "cert" {
+  cluster_id = digitalocean_database_cluster.postgres_cluster.id
+}
+
+data "digitalocean_database_connection_pool" "postgres_pooler" {
+  cluster_id = digitalocean_database_cluster.postgres_cluster.id
+  name       = digitalocean_database_connection_pool.postgres_pooler.name
+}
+
+data "digitalocean_database_user" "user" {
+  cluster_id = digitalocean_database_cluster.postgres_cluster.id
+  name       = var.project_name
+}
