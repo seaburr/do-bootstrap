@@ -14,7 +14,7 @@ variable "project_name" {
 variable "region" {
   type        = string
   description = "Sets the region for DigitalOcean resources."
-  default     = "nyc2"
+  default     = "nyc1"
 }
 
 variable "vpc_cidr" {
@@ -44,7 +44,7 @@ variable "k8s_ha" {
 variable "k8s_default_node_slug" {
   type        = string
   description = "Sets the node size of the default node pool in the k8s cluster."
-  default     = "s-1vcpu-2gb"
+  default     = "s-2vcpu-4gb-amd"
 }
 
 variable "k8s_default_auto_scale" {
@@ -62,7 +62,7 @@ variable "k8s_default_min_nodes" {
 variable "k8s_default_max_nodes" {
   type        = number
   description = "Sets the maximum number of nodes in the default node pool."
-  default     = 3
+  default     = 2
 }
 
 variable "k8s_major_version" {

@@ -55,12 +55,13 @@ No modules.
 | <a name="input_flux_github_url"></a> [flux\_github\_url](#input\_flux\_github\_url) | Sets the GitHub repo clone URL (HTTP) to bootstrap Flux with. | `string` | `null` | no |
 | <a name="input_flux_github_username"></a> [flux\_github\_username](#input\_flux\_github\_username) | Arbitrary username used for bootstrapping Flux. | `string` | `"git"` | no |
 | <a name="input_k8s_default_auto_scale"></a> [k8s\_default\_auto\_scale](#input\_k8s\_default\_auto\_scale) | If set, the k8s cluster size will auto-scale based on load and within the bounds of the min/max set. | `bool` | `true` | no |
-| <a name="input_k8s_default_max_nodes"></a> [k8s\_default\_max\_nodes](#input\_k8s\_default\_max\_nodes) | Sets the maximum number of nodes in the default node pool. | `number` | `3` | no |
+| <a name="input_k8s_default_max_nodes"></a> [k8s\_default\_max\_nodes](#input\_k8s\_default\_max\_nodes) | Sets the maximum number of nodes in the default node pool. | `number` | `2` | no |
 | <a name="input_k8s_default_min_nodes"></a> [k8s\_default\_min\_nodes](#input\_k8s\_default\_min\_nodes) | Sets the minimum number of nodes in the default node pool. | `number` | `1` | no |
-| <a name="input_k8s_default_node_slug"></a> [k8s\_default\_node\_slug](#input\_k8s\_default\_node\_slug) | Sets the node size of the default node pool in the k8s cluster. | `string` | `"s-1vcpu-2gb"` | no |
+| <a name="input_k8s_default_node_slug"></a> [k8s\_default\_node\_slug](#input\_k8s\_default\_node\_slug) | Sets the node size of the default node pool in the k8s cluster. | `string` | `"s-2vcpu-4gb-amd"` | no |
 | <a name="input_k8s_ha"></a> [k8s\_ha](#input\_k8s\_ha) | Sets whether or not the k8s control plane should be highly available. | `bool` | `false` | no |
+| <a name="input_k8s_major_version"></a> [k8s\_major\_version](#input\_k8s\_major\_version) | Sets the major version of k8s to use. | `string` | `"1.32."` | no |
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Sets the project name for this infrastructure footprint. Used in various places to provide useful names to resources. | `string` | `"demo"` | no |
-| <a name="input_region"></a> [region](#input\_region) | Sets the region for DigitalOcean resources. | `string` | `"nyc2"` | no |
+| <a name="input_region"></a> [region](#input\_region) | Sets the region for DigitalOcean resources. | `string` | `"nyc1"` | no |
 | <a name="input_ttl"></a> [ttl](#input\_ttl) | TTL of DNS records created in DigitalOcean. | `number` | `600` | no |
 | <a name="input_vpc_cidr"></a> [vpc\_cidr](#input\_vpc\_cidr) | Sets the IP block size for the VPC. | `string` | `"10.20.0.0/16"` | no |
 
