@@ -13,7 +13,7 @@ resource "kubernetes_service" "dolb" {
     selector = {
       "app.kubernetes.io/name" = "aaas"
     }
-    session_affinity = "ClientIP"
+    #session_affinity = "ClientIP"
     port {
       port        = 443
       target_port = 8000
