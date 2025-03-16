@@ -11,12 +11,12 @@ resource "kubernetes_service" "dolb" {
   }
   spec {
     selector = {
-      app = "ingressrouter"
+      "app.kubernetes.io/name" = "aaas"
     }
     session_affinity = "ClientIP"
     port {
       port        = 443
-      target_port = 80
+      target_port = 8000
     }
 
     type = "LoadBalancer"
